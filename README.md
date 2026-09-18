@@ -1,7 +1,7 @@
-# Phishing URL Detector (100% Java)
+# Phishing URL Detector
 
-A hybrid phishing URL detector — rule-based scoring **and** a hand-rolled
-Logistic Regression ML model — written entirely in Java. No Python, no
+A hybrid phishing URL detector - rule-based scoring **and** a hand-rolled
+Logistic Regression ML model - written entirely in Java. No Python, no
 external ML libraries, no pickle files. The ML model trains itself in a
 fraction of a second, in-process, every time you run the app, straight from
 the CSV dataset.
@@ -132,7 +132,7 @@ the `THRESHOLD` constant in `URLAnalyzer.java`.
    used by the rule-based scorer.
 3. Standardizes the features (mean 0, std 1).
 4. Trains a Logistic Regression model with plain gradient descent
-   (2000 epochs, learning rate 0.1 — both tunable constants in the class).
+   (2000 epochs, learning rate 0.1 - both tunable constants in the class).
 5. Exposes `predictProbability(double[] features)`, which returns P(phishing)
    for any new URL.
 
